@@ -27,9 +27,9 @@ int main()
     ledBlue = 0;
 
     // Write to LCD using the LCD_16X2_DISPLAY driver class
-    lcd.printf("Hello World");
+    lcd.printf("Yo mama");
     lcd.locate(1, 0);   //Row 1, Col 0
-    lcd.printf("ELEC143");
+    lcd.printf("ELEC DEEZ NUTS");
 
     // This is a variable (not an oject as it has no functions) that stores a whole number (integer) in memory
     // (I used the keyword volatile to force it to use memory... long story and one for later)

@@ -24,22 +24,22 @@ int main()
     printf("\nTASK-110\n");
 
     // Integer
-    int count = 0;
+    int count = 10;
     printf("count = %d\n", count);
 
     // Add one to count
-    count = count + 1;
+    count = count + 2;
     printf("New value of count = %d\n", count);
 
     // Char
     char character;
-    character = 'A';
+    character = '9';
     printf("The character %c has the ASCII code %d\n", character, character);
 
     // Short
-    short shortCount = 32766;
+    short shortCount = 32766;                                                   // no clue what changing short to unsigned short does
     printf("The value of shortCount is %hd\n", shortCount);
-    shortCount = shortCount + 1;
+    shortCount = shortCount + 2;                                                         // changing shortcount to +2 makes added shortcount negative
     printf("add 1 and shortCount is %hd\n", shortCount);
 
     // Long long
@@ -48,10 +48,10 @@ int main()
     printf("A very large number in hex %llX\n", NN);
 
     // unsigned
-    unsigned short p = 1; //16 bit
-    printf("unsigned int p = %u\n", p);
+    short p = 1; //16 bit
+    printf("unsigned int p = %d\n", p);                                     //i don't know wtf changing %u to %d did as well as what getting rid of unsigned did
     p = p - 2;
-    printf("Subtract 2. Now unsigned int p = %u\n", p);
+    printf("Subtract 2. Now unsigned int p = %d\n", p);
 
     // float 
     float pi_float = 3.1415926536;
@@ -69,7 +69,13 @@ int main()
     printf("Size of a long long is %d bytes\n", sizeof(long long));
     printf("Size of a float is %d bytes\n", sizeof(float));
     printf("Size of a double is %d bytes\n", sizeof(double));
+    printf("Yo mama so fat she use size %11lld\n", NN);
 
+    //typedef
+    typedef char int8;
+    typedef short int16;
+    typedef int int32;
+    
     // Stop
     while (true);   
 }
