@@ -1,9 +1,9 @@
 #include "mbed.h"
 
 //All Led ON when the code starts
-DigitalOut redLED(PC_2,1);
-DigitalOut yellowLED(PC_3,1);
-DigitalOut greenLED(PC_6,1);
+DigitalOut redLED(PC_2,1);                      //PC2/ADC1IN12/PWM1_3N
+DigitalOut yellowLED(PC_3,1);                   //PC3/A2/ADC1IN13/SPI2_MOSI
+DigitalOut greenLED(PC_6,1);                    //PC6/UART6_TX/PWM3_1
 
 
 int main()

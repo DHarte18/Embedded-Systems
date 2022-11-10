@@ -29,6 +29,9 @@ int main()
     
     printf("You entered %d correct integer values. The value was %dms\n", parsed, delay_ms);
 
+    printf("\n\nTime on = %d\n", delay_ms);
+    printf("\nTime off = %d\n", delay_ms);
+    
     // Stop
     while (parsed > 0) {
         wait_us(delay_ms * 1000);
@@ -38,9 +41,13 @@ int main()
         wait_us(delay_ms * 1000);
         led1 = 0;
         led2 = 0;
-        led3 = 0;        
+        led3 = 0;  
+  
     } 
-
+    
+    printf("\n\nTime on = %d\n", parsed, delay_ms);
+    printf("\nTime off = %d\n", parsed, delay_ms);
+    
     printf("Invalid - please restart and try again\n");
     while(1);    
 }

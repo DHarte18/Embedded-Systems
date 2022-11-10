@@ -1,4 +1,4 @@
-##include "mbed.h"
+#include "mbed.h"
 
 DigitalIn ButtonA(PG_0); //Button A
 DigitalIn ButtonB(PG_1); //Button B
@@ -9,14 +9,14 @@ DigitalOut redLED(PC_2); //Red Traffic 1
 // main() runs in its own thread in the OS
 int main()
 {
-    int (btnA);
-    int (btnB);
-    int (btnC);
-    int (btnD);
+    int btnA;
+    int btnB;
+    int btnC;
+    int btnD;
     // Turn OFF the red LED
     redLED = 0;
 
-    while (true) {
+    while (true){
     
         // Wait for the button to be pressed
         do {
@@ -24,8 +24,7 @@ int main()
             btnB = ButtonB; //Read button B
             btnC = ButtonC; //Read button C
             btnD = ButtonD; //Read button D
-            }
-            while ((btnA == 0) && (btnB == 0) && (btnC == 0) && (btnD == 0));
+        }while ((btnA == 0) || (btnB == 0) || (btnC == 0) || (btnD == 0));
           
 
 
@@ -33,7 +32,7 @@ int main()
         redLED = !redLED;
 
         //Wait for noise to settle
-        wait_us(10000);
+        wait_us(100000);
 
         // Wait for the button to be released
         do {
@@ -41,12 +40,11 @@ int main()
             btnB = ButtonB; //Read button B
             btnC = ButtonC; //Read button C
             btnD = ButtonD; //Read button D
-            }
-            while ((btnA == 1) && (btnB == 1) && (btnC == 1) && (btnD == 1));
+        }while ((btnA == 1) || (btnB == 1) || (btnC == 1) || (btnD == 1));
             
 
         //Wait for noise to settle
-        wait_us(10000);
+        wait_us(100000);
     }
 }
 
